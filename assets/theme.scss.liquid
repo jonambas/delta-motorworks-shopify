@@ -1443,6 +1443,11 @@ label[for] {
 
 .main-content--flush {
   margin-top: 0;
+  padding-bottom: $gutter-site * 3;
+  
+  @include media-query($medium-up) {
+    background: #fff;
+  }
 }
 
 .full-width {
@@ -2848,6 +2853,11 @@ $slick-opacity-not-active: 0.25;
   background-color: $color-content;
   overflow: hidden;
 
+  @include media-query($medium-up) {
+    border-top: 1px solid $color-header-border;
+  }
+  
+
   &.meganav--active {
     visibility: visible;
     z-index: $z-index-dropdown + 1; // opening meganav is always higher than closing one
@@ -3053,7 +3063,7 @@ html {
 /*================ Linklists and page content ================*/
 .site-footer__section-title {
   color: $color-footer-text;
-  font-size: em(24);
+  font-size: em(18);
 }
 
 .site-footer__list {
@@ -3709,7 +3719,7 @@ html {
   margin-bottom: -($gutter-site * 1.5);
 
   @include media-query($medium-up) {
-    min-height: 700px;
+    min-height: 600px;
     height: 75vh;
     margin-bottom: -($gutter-site * 3);
   }
