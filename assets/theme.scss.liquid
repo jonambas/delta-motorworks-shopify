@@ -1444,7 +1444,7 @@ label[for] {
 .main-content--flush {
   margin-top: 0;
   padding-bottom: $gutter-site * 3;
-  
+
   @include media-query($medium-up) {
     background: #fff;
   }
@@ -2743,7 +2743,7 @@ $slick-opacity-not-active: 0.25;
 
 /*================ Site Nav ================*/
 .site-nav {
-  margin-left: -$gutter-site;
+  // margin-left: -$gutter-site;
   white-space: nowrap;
 }
 
@@ -2765,7 +2765,7 @@ $slick-opacity-not-active: 0.25;
   position: relative;
   color: $color-header-links;
   color: rgba($color-header-links, 0.6);
-  padding: $gutter-site $gutter-site + 8px;
+  padding: $gutter-site $gutter-site + 24px;
   z-index: $z-index-nav-links;
 
   .icon {
@@ -2856,7 +2856,7 @@ $slick-opacity-not-active: 0.25;
   @include media-query($medium-up) {
     border-top: 1px solid $color-header-border;
   }
-  
+
 
   &.meganav--active {
     visibility: visible;
@@ -3327,7 +3327,7 @@ html {
   margin-bottom: $gutter-site * 2;
 
   @include media-query($medium-up) {
-    margin-bottom: $gutter-site * 4;
+    margin-bottom: $gutter-site * 3;
   }
 }
 
@@ -3516,12 +3516,18 @@ html {
   max-width: 200px;
   margin: 0 auto;
 
+  overflow: hidden;
+
   img {
-    position: relative;
+    position: absolute;
     top: 50%;
-    @include transform(translateY(-50%));
+    left: 50%;
+    @include transform(translate(-50%, -50%));
     display: block;
     max-height: $product-slider-image-height - ($product-slider-padding * 2);
+    // height: 100%;
+    max-width: 140%;
+
     margin: 0 auto;
 
     .supports-no-csstransforms & {
@@ -3544,7 +3550,7 @@ html {
 .product-single__thumbnails {
   .slick-prev,
   .slick-next {
-    opacity: 0.2;
+    opacity: 0.5;
     transition: opacity 0.15s ease-in;
     width: 30px;
     height: 30px;
@@ -4818,4 +4824,13 @@ body.modal--is-active {
     width: 100%;
     height: auto;
   }
+}
+
+.delta__description {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  width: 95%;
+  max-width: 880px;
+  margin: 0 auto;
 }

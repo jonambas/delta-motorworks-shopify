@@ -117,19 +117,22 @@
             </button>
           </div>
         </form>
-
-        <hr>
-
-        <div class="rte product-single__description" itemprop="description">
-          {{ product.description }}
-        </div>
-
-        {% if settings.social_sharing_products %}
-          <hr>
-          {% include 'social-sharing' %}
-        {% endif %}
       </div>
     </div>
+  </div>
+
+  <div class="delta__description"  itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+    <div class="product-single__info-wrapper">
+      <div class="rte product-single__description" itemprop="description">
+        {{ product.description }}
+      </div>
+    </div>
+
+      {% if settings.social_sharing_products %}
+        <hr>
+        {% include 'social-sharing' %}
+      {% endif %}
+
   </div>
 </div>
 
