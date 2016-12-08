@@ -2765,7 +2765,7 @@ $slick-opacity-not-active: 0.25;
   position: relative;
   color: $color-header-links;
   color: rgba($color-header-links, 0.6);
-  padding: $gutter-site $gutter-site + 24px;
+  padding: $gutter-site $gutter-site + 12px;
   z-index: $z-index-nav-links;
 
   .icon {
@@ -4817,13 +4817,19 @@ body.modal--is-active {
   display: inline-block;
   width: auto;
   max-width: 100%;
-  height: 50px;
-  margin: 16px 0 0 0;
+  height: 70px;
+  margin: 16px 0 -8px 0;
 
   @include media-query($small) {
     width: 100%;
-    height: auto;
+    height: 40px;
+    margin: 16px 0;
   }
+}
+
+.delta__logo.delta__logo--footer {
+  margin: 0 0 16px 0;
+  height: 40px !important;
 }
 
 .delta__description {
